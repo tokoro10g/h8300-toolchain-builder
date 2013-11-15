@@ -1,0 +1,13 @@
+--- gcc-4.4.6/gcc/config/h8300/t-h8300	2004-07-08 12:40:34.000000000 +0900
++++ gcc-4.4.6-cross/gcc/config/h8300/t-h8300	2013-11-15 06:20:11.000000000 +0900
+@@ -27,8 +27,8 @@
+ 	echo '#endif' >> fp-bit.c
+ 	cat $(srcdir)/config/fp-bit.c >> fp-bit.c
+ 
+-MULTILIB_OPTIONS = mh/ms/msx mn mint32
+-MULTILIB_DIRNAMES = h8300h h8300s h8sx normal int32
++MULTILIB_OPTIONS = mh mn mint32
++MULTILIB_DIRNAMES = h8300h normal int32
+ MULTILIB_EXCEPTIONS = mint32 mn mn/mint32
+ 
+ LIBGCC = stmp-multilib

@@ -1,0 +1,10 @@
+--- binutils-2.16.1/libiberty/Makefile.in	2005-03-08 08:20:07.000000000 +0900
++++ binutils-2.16.1-cross/libiberty/Makefile.in	2013-11-15 06:26:50.000000000 +0900
+@@ -227,6 +227,7 @@
+ 	  $(AR) $(AR_FLAGS) $(TARGETLIB) \
+ 	    $(REQUIRED_OFILES) $(EXTRA_OFILES) $(LIBOBJS); \
+ 	  $(RANLIB) $(TARGETLIB); \
++	  cp $(TARGETLIB) ../ ; \
+ 	  cd ..; \
+ 	else true; fi
+ 
