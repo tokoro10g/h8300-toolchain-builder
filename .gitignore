@@ -1,2 +1,12 @@
 *.swp
 *.swo
+*-build/
+addontools/
+download/
+gmp*
+mpc*
+mpfr*
+binutils*
+gcc*
+newlib*
+install/
