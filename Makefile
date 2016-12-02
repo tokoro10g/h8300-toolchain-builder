@@ -110,6 +110,7 @@ build-binutils:
 	cd binutils-build;\
 	CFLAGS="-I$(ADDON_TOOLS_DIR)/include" \
 	LDFLAGS="-L$(ADDON_TOOLS_DIR)/lib" \
+	ac_cv_prog_CONFIGURED_MAKEINFO=missing \
 	../$(BINUTILS_SRC)/configure \
 		--target=$(TARGET) \
 		--prefix=$(PREFIX) \
@@ -126,6 +127,7 @@ build-gcc-1:
 	@echo Building gcc 1st-pass...
 	mkdir -p gcc-build;\
 	cd gcc-build;\
+	MAKEINFO=missing \
 	../$(GCC_SRC)/configure \
 		--target=$(TARGET) \
 		--prefix=$(PREFIX) \
